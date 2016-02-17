@@ -29,69 +29,71 @@ tGa  = trev.*10^-9;
 % MODEL VISUALIZATION
 
 % Figure 1, Panel 1. Mass of continental crust vs. time:
-subplot(2,3,1)
-plot(tGa, J(:,2))
+subplot(3,2,1)
+plot(tGa, J(:,2),'LineWidth',2)
 ylabel('Mass of continental crust (kg)', 'fontsize', 14)
 xlabel('Time (Ga)', 'fontsize', 14)
+title('CRUST')
 xlim([0 max(tGa)])
 set(gca, 'XMinorTick', 'on', 'YMinorTick', 'on')
 set(gca, 'XDir', 'reverse')
 set(gca, 'fontsize', 14)
 set(gcf, 'color', 'w')
-grid on
+box on
 
 % Figure 1, Panel 2. Mass of mantle vs. time:
-subplot(2,3,2)
-plot(tGa, J(:,1))
+subplot(3,2,2)
+plot(tGa, J(:,1),'LineWidth',2)
 ylabel('Mass of mantle (kg)', 'fontsize', 14)
 xlabel('Time (Ga)', 'fontsize', 14)
+title('MANTLE')
 xlim([0 max(tGa)])
 ylim([min(J(:,1)) max(J(:,1))])
 set(gca, 'XMinorTick', 'on', 'YMinorTick', 'on')
 set(gca, 'XDir', 'reverse')
 set(gca, 'fontsize', 14)
-grid on
+box on
 
-% Figure 1, Panel 3. Sm-147_mantle decay vs. time:
-subplot(2,3,3)
-plot(tGa, J(:,3))
+% Figure 1, Panel 4. Sm-147_mantle decay vs. time:
+subplot(3,2,4)
+plot(tGa, J(:,3),'LineWidth',2)
 ylabel('^{147}Sm_{mantle} (moles)', 'fontsize', 14)
 xlabel('Time (Ga)', 'fontsize', 14)
 xlim([0 max(tGa)])
 set(gca, 'XMinorTick', 'on', 'YMinorTick', 'on')
 set(gca, 'XDir', 'reverse')
 set(gca, 'fontsize', 14)
-grid on
+box on
 
-% Figure 1, Panel 4. Nd-142_mantle growth vs. time:
-subplot(2,3,4)
-plot(tGa, J(:,4))
+% Figure 1, Panel 6. Nd-142_mantle growth vs. time:
+subplot(3,2,6)
+plot(tGa, J(:,4),'LineWidth',2)
 ylabel('^{143}Nd_{mantle} (moles)', 'fontsize', 14)
 xlabel('Time (Ga)', 'fontsize', 14)
 xlim([0 max(tGa)])
 set(gca, 'XMinorTick', 'on', 'YMinorTick', 'on')
 set(gca, 'XDir', 'reverse')
 set(gca, 'fontsize', 14)
-grid on
+box on
+
+% Figure 1, Panel 3. Sm-147_crust decay vs. time:
+subplot(3,2,3)
+plot(tGa, J(:,5),'LineWidth',2)
+ylabel('^{147}Sm_{crust} (moles)', 'fontsize', 14)
+xlabel('Time (Ga)', 'fontsize', 14)
+xlim([0 max(tGa)])
+set(gca, 'XMinorTick', 'on', 'YMinorTick', 'on')
+set(gca, 'XDir', 'reverse')
+set(gca, 'fontsize', 14)
+box on
 
 % Figure 1, Panel 5. Sm-147_crust decay vs. time:
-subplot(2,3,5)
-plot(tGa, J(:,5))
+subplot(3,2,5)
+plot(tGa, J(:,6),'LineWidth',2)
 ylabel('^{147}Sm_{crust} (moles)', 'fontsize', 14)
 xlabel('Time (Ga)', 'fontsize', 14)
 xlim([0 max(tGa)])
 set(gca, 'XMinorTick', 'on', 'YMinorTick', 'on')
 set(gca, 'XDir', 'reverse')
 set(gca, 'fontsize', 14)
-grid on
-
-% Figure 1, Panel 6. Sm-147_crust decay vs. time:
-subplot(2,3,6)
-plot(tGa, J(:,6))
-ylabel('^{147}Sm_{crust} (moles)', 'fontsize', 14)
-xlabel('Time (Ga)', 'fontsize', 14)
-xlim([0 max(tGa)])
-set(gca, 'XMinorTick', 'on', 'YMinorTick', 'on')
-set(gca, 'XDir', 'reverse')
-set(gca, 'fontsize', 14)
-grid on
+box on
